@@ -15,14 +15,13 @@ const ContactDetails = () => {
               <p className='text-[16px] '>Name: <span className='font-[700] text-white'>{data.name}</span></p>
               <p className='text-[16px] '>Emal: <span className='font-[700] text-white'>{data.email}</span></p>
             </div>
-            <div className='card-actions justify-end'>
+
+            <div className='card-actions justify-end '>
               <NavLink to={'/'}>
                 <button className='btn btn-primary'>Main Page</button>
               </NavLink>
-            </div>
-            <div className='card-actions justify-end'>
               <NavLink to={'/contact'}>
-                <button className='btn btn-primary'>Contact List</button>
+                <button className='btn btn-secondary'>Contact List</button>
               </NavLink>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import AddContact from './components/AddContact';
 import ContactList from './components/ContactList';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import ContactDetails from '../src/components/ContactDetails/insex';
+import ContactDetails from './components/ContactDetails';
 import { getContacts } from './services/getApi';
 import deleteOneContact from './services/deleteApi';
 import postContact from './services/postApi';
