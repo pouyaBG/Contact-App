@@ -45,11 +45,11 @@ const AddContact = ({ addContactHandler }) => {
           />
         </div>
         <div className=' mt-5 flex justify-between w-full px-6  md:max-w-[600px]'>
-          <button type='submit' className={`btn w-[60%] md:w-[75%]`}>
+          <button type='submit' className="btn btn-primary w-[60%] md:w-[75%] ">
             Add Contact
           </button>
           <NavLink to={'/contact'}>
-            <button type='button' className='btn btn-secondary'>
+            <button type='button' className='btn btn-success'>
               Contact List
             </button>
           </NavLink>
