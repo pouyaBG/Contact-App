@@ -17,11 +17,11 @@ function App() {
         alert('please enter a name or email address');
         return;
       }
+      await postContact(contact)
       setContacts([
         ...contacts,
-        { id: Math.ceil(Math.random() * 1000), ...contact },
+        { id: new Date().getTime(), ...contact },
       ]);
-      await postContact(contact)
     } catch (error) { }
     // localStorage.setItem(
     //   'contacts',
@@ -35,9 +35,9 @@ function App() {
 
   const deleteContactHandler = async (id) => {
     try {
+      await deleteOneContact(id);
       const filteredContact = contacts.filter((c) => c.id !== id);
       setContacts(filteredContact);
-      await deleteOneContact(id);
     } catch (error) {
     }
     // localStorage.setItem('contacts', JSON.stringify([...filteredContact]));
@@ -56,7 +56,9 @@ function App() {
 
   return (
     <main className='App'>
-      <h1 className='text-black font-semibold py-5'>Contact App</h1>
+      <div className='w-full border-b-2 border-primary mb-9 rounded-b-sm'>
+        <h1 className='text-black font-semibold py-5 text-[16px] md:text-[30px] '>Welcome to Contact App</h1>
+      </div>
       <Routes>
         <Route path='/user/:id' element={<ContactDetails />} />
         <Route

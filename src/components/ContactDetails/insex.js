@@ -20,6 +20,11 @@ const ContactDetails = () => {
                 <button className='btn btn-primary'>Main Page</button>
               </NavLink>
             </div>
+            <div className='card-actions justify-end'>
+              <NavLink to={'/contact'}>
+                <button className='btn btn-primary'>Contact List</button>
+              </NavLink>
+            </div>
           </div>
         </div>
       </section>
